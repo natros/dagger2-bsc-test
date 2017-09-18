@@ -33,7 +33,7 @@
         <plugin>
           <groupId>org.bsc.maven</groupId>
           <artifactId>maven-processor-plugin</artifactId>
-          <version>3.3.2</version>
+          <version>3.3.3-SNAPSHOT</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -51,6 +51,7 @@
         <artifactId>maven-processor-plugin</artifactId>
         <configuration>
           <processors>dagger.internal.codegen.ComponentProcessor</processors>
+          <force>true</force>
         </configuration>
         <dependencies>
           <dependency>
@@ -65,14 +66,14 @@
             <goals>
               <goal>process</goal>
             </goals>
-            <phase>process-sources</phase>
+            <phase>generate-sources</phase>
           </execution>
           <execution>
             <id>process-test</id>
             <goals>
               <goal>process-test</goal>
             </goals>
-            <phase>process-test-resources</phase>
+            <phase>generate-test-sources</phase>
           </execution>
         </executions>
       </plugin>
