@@ -65,14 +65,14 @@
             <goals>
               <goal>process</goal>
             </goals>
-            <phase>generate-sources</phase>
+            <phase>process-sources</phase>
           </execution>
           <execution>
             <id>process-test</id>
             <goals>
               <goal>process-test</goal>
             </goals>
-            <phase>generate-test-sources</phase>
+            <phase>process-test-resources</phase>
           </execution>
         </executions>
       </plugin>
